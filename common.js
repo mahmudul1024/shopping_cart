@@ -15,3 +15,24 @@ function  update_Quantity(isIncrese ,fieldnumber){
 
     return new_Case_Number
 }
+
+function UpdateTotalPrice(new_Case_Number ,isPhoneOrCase){
+let TotalCasePrice
+let case_TotalText
+if(isPhoneOrCase){
+
+     TotalCasePrice=new_Case_Number*1219
+     case_TotalText= document.getElementById('case_totalid1')
+}
+else{
+    
+     TotalCasePrice=new_Case_Number*59
+    case_TotalText= document.getElementById('case_totalid2')
+}
+    
+
+
+
+    case_TotalText.innerText=TotalCasePrice
+    
+}
