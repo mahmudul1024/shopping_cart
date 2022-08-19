@@ -33,6 +33,40 @@ else{
 
 
 
-    case_TotalText.innerText=TotalCasePrice
+    case_TotalText.innerText=TotalCasePrice  
     
+}
+
+function SubTotalCalculate(){
+    //subTotal calculate for plus
+const subTotalPhoneString=document.getElementById('case_totalid1')
+const subTotalPhone=parseInt(subTotalPhoneString.innerText)
+const subTotalCaseString=document.getElementById('case_totalid2')
+const subTotalCase=parseInt(subTotalCaseString.innerText)
+const subTotal= subTotalPhone+subTotalCase
+
+const subTotalText=document.getElementById('subtotalId')
+subTotalText.innerText=subTotal
+
+return subTotal
+}
+
+
+function TaxCalculate(subTotalCopy){
+    //tax calculate
+
+const TaxTotal=subTotalCopy*0.1
+const taxId=document.getElementById('taxId')
+const TaxString=TaxTotal.toFixed(2)
+const TaxNumber=parseFloat(TaxString)
+taxId.innerText=TaxNumber
+
+return TaxNumber
+}
+
+// calculate final Total
+function finalTotal(Copy1, Copy2){
+const finalTotal=Copy1+Copy2
+const finalTotalId=document.getElementById('finalTotalid')
+finalTotalId.innerText=finalTotal
 }
